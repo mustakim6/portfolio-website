@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --bg: #222831;
+  --card: #393E46;
+  --primary: #00ADB5;
+  --text: #eeeeee;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+

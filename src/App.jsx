@@ -1,16 +1,42 @@
-
-import './App.css'
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./sections/Hero";
+import Footer from "./components/Footer";
+import About from './sections/About';
 
 function App() {
-  
-
   return (
     <>
-   <h1> hello there, i'm md.mustakim billah. hhkhkjhguy</h1>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsa assumenda quibusdam exercitationem praesentium dignissimos optio, quae commodi fuga, debitis quos aspernatur nostrum dolores repudiandae dicta. Asperiores beatae exercitationem corporis vel perspiciatis vero harum!</p>
-   <h3>ljsdfoihsosldnksjh</h3>
+      {/* header section start */}
+      <header>
+        <Navbar></Navbar>
+      </header>
+      {/* header section end */}
+
+      {/* Main section start */}
+      <main>
+        {/* hero section contain 1st part of the webpage start here */}
+        <section>
+          <Hero></Hero>
+        </section>
+        {/* hero section end */}
+
+        {/* about section contain 2nd part of the webpage start here */}
+          <section>
+            <About></About>
+          </section>
+        {/* about section end here */}
+
+      </main>
+      {/* Main section end */}
+
+      {/* Footer section start */}
+      <footer>
+        <Footer></Footer>
+      </footer>
+      {/* Footer section end */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
