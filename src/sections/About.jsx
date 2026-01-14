@@ -1,5 +1,5 @@
 import React from "react";
-import hcrtd from '../assets/hcrtd.mp4'
+import hcrtd from "../assets/hcrtd.mp4";
 
 const About = () => {
   return (
@@ -29,7 +29,7 @@ const About = () => {
         </p>
 
         <div className="w-48 md:ml-28 my-3 border-3 ">
-          <video  loop  className="">
+          <video autoPlay loop muted playsInline className="">
             <source src={hcrtd} type="video/mp4" />
           </video>
         </div>
