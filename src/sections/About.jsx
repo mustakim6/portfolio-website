@@ -22,7 +22,7 @@ const About = () => {
         developers, and grow professionally.
         </p>
         
-        <img src="" alt="" />
+        
       </div>
     </div>
   );
