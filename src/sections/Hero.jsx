@@ -1,5 +1,6 @@
 import React from "react";
 import profile from "../assets/profile.jpg";
+import Button from "../components/Button";
 
 const Hero = () => {
   return (
@@ -19,11 +20,11 @@ const Hero = () => {
           Internship opportunity to gain real-world industry experience.
         </p>
 
-        {/* cta buttons div start */}
+        {/* call to action buttons div start */}
         <div className="flex gap-4 my-2">
-            <button id='projects' className="btn bg-[#009fa7] hover:bg-[#025f64] btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">View Projects</button>
+            <a href="#projects"><Button btnText={'View Projects'}></Button></a>
 
-            <button className="btn bg-[#009fa7] hover:bg-[#025f64] btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Download Resume</button>
+            <Button btnText={'Download Resume'}></Button>
             
            
         </div>
