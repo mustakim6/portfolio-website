@@ -3,12 +3,15 @@ import hcrtd from "../assets/hcrtd.mp4";
 
 const About = () => {
   return (
-    <div>
+    <div id='about'>
+        
       <h1 className="text-2xl md:text-3xl lg:text-5xl text-center my-4 font-semibold ">
         About Me
       </h1>
 
+{/* about paragraph n image container start here */}
       <div className="text-sm md:text-base lg:text-lg leading-relaxed text-center md:text-start flex flex-col md:flex-row items-center p-2">
+
         <p className="md:w-[68%]">
           I am a Computer Science and Engineering student with a strong interest
           in frontend web development. I have hands-on experience building
@@ -28,12 +31,17 @@ const About = () => {
           developers, and grow professionally.
         </p>
 
-        <div className="w-48 md:ml-28 my-3 border-3 ">
+{/*div for add a video, it contains logos of html,css,react,tailwindcss and js start here*/}
+        <div className="w-48 md:ml-28 my-3 ">
           <video autoPlay loop muted playsInline className="">
             <source src={hcrtd} type="video/mp4" />
           </video>
         </div>
+{/*div for add a video, it contains logos of html,css,react,tailwindcss and js end here*/}
+
       </div>
+{/* about paragraph n image container end here */}
+
     </div>
   );
 };

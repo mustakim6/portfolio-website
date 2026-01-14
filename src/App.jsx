@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import Footer from "./components/Footer";
 import About from './sections/About';
+import Skills from './sections/Skills';
 
 function App() {
   return (
@@ -26,6 +27,12 @@ function App() {
             <About></About>
           </section>
         {/* about section end here */}
+
+        {/* Skills section contain 3rd part of the webpage start here */}
+          <section>
+            <Skills></Skills>
+          </section>
+        {/* Skills section end here */}
 
       </main>
       {/* Main section end */}
