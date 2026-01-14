@@ -1,6 +1,7 @@
 import React from "react";
 import profile from "../assets/profile.jpg";
 import Button from "../components/Button";
+import { FaDownload } from "react-icons/fa6";
 
 const Hero = () => {
   return (
@@ -22,10 +23,11 @@ const Hero = () => {
 
         {/* call to action buttons div start */}
         <div className="flex gap-4 my-2">
-            <a href="#projects"><Button btnText={'View Projects'}></Button></a>
+            <a href="#projects"><Button btnText='View Projects'></Button></a>
 
-            <Button btnText={'Download Resume'}></Button>
-            
+              <Button btnText='Download Resume'
+              icon={<FaDownload  className="text-2xl"/>}></Button>
+  
            
         </div>
         {/* cta buttons div end */}
