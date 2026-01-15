@@ -5,11 +5,11 @@ const About = () => {
   return (
     <div id='about'>
         
-      <h1 className="text-2xl md:text-3xl lg:text-5xl text-center my-4 font-semibold ">
+      <h1 className="text-2xl md:text-3xl lg:text-5xl text-center my-4 font-semibold text-[#00f1fd] ">
         About Me
       </h1>
 
-{/* about paragraph n image container start here */}
+{/* about paragraph and image container start here */}
       <div className="text-sm md:text-base lg:text-lg leading-relaxed text-center md:text-start flex flex-col md:flex-row items-center p-2">
 
         <p className="md:w-[68%]">

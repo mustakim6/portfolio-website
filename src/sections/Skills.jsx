@@ -12,16 +12,20 @@ import tailwind1 from "../assets/tailwind1.jpg";
 import tailwind2 from "../assets/tailwind2.jpg";
 import daisyui1 from "../assets/daisyui1.png";
 import daisyui2 from "../assets/daisyui2.jpg";
+import SkillsSection from "./SkillsSection";
 
 const Skills = () => {
   return (
     <div id="skills">
 
-      <h1 className="text-2xl md:text-3xl lg:text-5xl text-center my-6 font-semibold ">
+      <h1 className="text-2xl md:text-3xl lg:text-5xl text-center my-6 font-semibold text-[#00f1fd] ">
         Skills
       </h1>
 
-      <div className="flex flex-wrap md:flex-nowrap justify-center gap-6">
+      <p className="text-sm md:text-base lg:text-lg leading-relaxed text-center my-6">An overview of the technologies and tools I use to build modern, responsive, and scalable web applications.</p>
+
+{/* container for all skill card start here */}
+      <div className=" max-w-3xl  px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-8">
         <SkillCard
           cardTitle="HTML5"
           cardText="semantic and accessible markup"
@@ -59,6 +63,13 @@ const Skills = () => {
           img2={daisyui2}
         ></SkillCard>
       </div>
+{/* container for all skill card end here */}
+
+<div>
+  <SkillsSection></SkillsSection>
+</div>
+
+
     </div>
   );
 };

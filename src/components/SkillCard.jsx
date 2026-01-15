@@ -1,23 +1,27 @@
-import React from 'react';
+import React from "react";
 
-const SkillCard = ({cardTitle, cardText, img1, img2}) => {
-    return (
-        <div className="card bg-base-100 w-60 shadow-sm">
+const SkillCard = ({ cardTitle, cardText, img1, img2 }) => {
+  return (
+    <div
+      className="card bg-black/20 shadow-sm hover:shadow-[0_8px_25px_rgba(26,209,165,0.45)]
+  transition-all
+  duration-300 "
+    >
+      <figure className=" hover-gallery w-full ">
+        <img src={img1} />
+        <img src={img2} />
+      </figure>
 
-        <figure className=" hover-gallery max-w-60">
-
-          <img src={img1} />
-          <img src={img2} />
-          
-        </figure>
-
-        <div className="card-body items-center text-center">
-          <h2 className="card-title">{cardTitle}</h2>
-          <p>{cardText}</p>
-        </div>
-        
+      <div className="card-body items-center text-center">
+        <h2 className="card-title text-lg md:text-xl font-semibold text-purple-400">
+          {cardTitle}
+        </h2>
+        <p className="text-sm md:text-xl leading-relaxed text-gray-300">
+          {cardText}
+        </p>
       </div>
-    );
+    </div>
+  );
 };
 
 export default SkillCard;
