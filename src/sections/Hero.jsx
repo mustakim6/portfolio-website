@@ -1,16 +1,19 @@
 import React from "react";
-import profile from "../assets/profile.jpg";
+import profile from "../assets/profile.jpeg";
 import Button from "../components/Button";
 import { FaDownload } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <div id='hero' className="flex flex-col-reverse md:flex-row my-2 md:w-[90%] mx-auto ">
-
+    <div
+      id="hero"
+      className="flex flex-col-reverse md:flex-row my-6 md:w-[90%] mx-auto "
+    >
       {/* div for content and short intro start*/}
       <div className=" md:max-w-[60%] flex flex-col justify-center md:p-2">
-        
-        <h1 className="md:text-3xl lg:text-5xl font-bold mb-2">Hi, I’m Mustakim Billah</h1>
+        <h1 className="md:text-3xl lg:text-5xl font-bold mb-2">
+          Hi, I’m Mustakim Billah
+        </h1>
         <h3 className="md:text-2xl font-semibold">
           Frontend Developer | <span className="text-[#61DBFB]">React </span>&
           <span className="text-[#38BDF8]"> Tailwind CSS</span>
@@ -23,30 +26,39 @@ const Hero = () => {
 
         {/* call to action buttons div start */}
         <div className="flex gap-4 my-2">
-            <a href="#projects"><Button btnText='View Projects'></Button></a>
+          <a href="#projects">
+            <Button btnText="View Projects"></Button>
+          </a>
 
-              <Button btnText='Download Resume'
-              icon={<FaDownload  className="text-2xl"/>}></Button>
-  
-           
+          <Button
+            btnText="Download Resume"
+            icon={<FaDownload className="text-2xl" />}
+          ></Button>
         </div>
         {/* cta buttons div end */}
-
       </div>
       {/* div for content and short intro end*/}
 
       {/* div for image  start here*/}
       <div className=" md:ml-36">
         <div className="flex justify-center">
-          <img
+          {/* <img
             src={profile}
             className="w-32 md:w-48 lg:w-64 h-auto rounded-full "
             alt="profile_photo"
-          />
+          /> */}
+          <div className="relative inline-block">
+            <div className="absolute inset-0 rounded-full blur-2xl bg-linear-to-r from-cyan-400 via-purple-500 to-pink-500 opacity-70 animate-pulse"></div>
+
+            <img
+              src={profile}
+              alt="profile_photo"
+              className="relative w-32 md:w-48 lg:w-64 h-auto rounded-full border-4 border-white/10"
+            />
+          </div>
         </div>
       </div>
       {/* div for image  end here*/}
-
     </div>
   );
 };

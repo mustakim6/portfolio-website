@@ -53,7 +53,7 @@ const SkillsSection = () => {
         <SkillItem
           icon={<FaTools className="text-emerald-400" />}
           title="Tools & Workflow"
-          text="Basic Git & GitHub, VS Code, browser dev tools, clean project structure"
+          text="Basic Git & GitHub, VS Code, browser dev tools, clean project structure and deploy in vercel"
         />
       </div>
     </section>
