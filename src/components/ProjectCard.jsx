@@ -5,7 +5,7 @@ const ProjectCard = ({websiteLink, aboutWebsite, websiteName, projectImg1, proje
   return (
     <div className="group rounded-2xl bg-black/30 border border-white/10 p-5 shadow-md hover:shadow-[0_8px_25px_rgba(26,209,165,0.45)] transition-all duration-300 hover:-translate-y-1">
       {/* Project Image */}
-      <div className=" overflow-hidden h-60 rounded-xl">
+      <div className=" overflow-hidden md:h-60 rounded-xl">
        
     <ProjectsImageContainer 
     projectImg1={projectImg1}

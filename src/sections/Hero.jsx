@@ -32,7 +32,7 @@ const Hero = () => {
 
           <Button
             btnText="Download Resume"
-            icon={<FaDownload className="text-2xl" />}
+            icon={<FaDownload className="text-xl md:text-2xl lg:text-3xl " />}
           ></Button>
         </div>
         {/* cta buttons div end */}
