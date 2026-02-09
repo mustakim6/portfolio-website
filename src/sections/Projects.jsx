@@ -5,10 +5,20 @@ import cryptoImg1 from "../assets/cryptoImg1.png";
 import cryptoImg2 from "../assets/cryptoImg2.png";
 import agencyImg1 from "../assets/agencyImg1.png";
 import agencyImg2 from "../assets/agencyImg2.png";
+// eslint-disable-next-line no-unused-vars
+import { motion} from "framer-motion";
+import { fadeUp } from "../components/motionjs/motion";
+
+
 
 const Projects = () => {
   return (
-    <div id="projects">
+    <motion.div 
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    id="projects">
       <SectionTitle
         heading="Projects"
         subHeading="Projects I built while learning and practicing modern web development
@@ -41,7 +51,7 @@ const Projects = () => {
       </div>
 
       {/*div for projects cards end here  */}
-    </div>
+    </motion.div>
   );
 };
 

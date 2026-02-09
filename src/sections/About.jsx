@@ -1,19 +1,24 @@
 import React from "react";
 import hcrtd from "../assets/hcrtd.mp4";
 import SectionTitle from "../components/SectionTitle";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { fadeUp } from "../components/motionjs/motion";
 
 const About = () => {
   return (
-    <div id='about'>
-        
-              <SectionTitle heading='About Me'></SectionTitle>
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      id="about"
+    >
+      <SectionTitle heading="About Me"></SectionTitle>
 
-      
-
-{/* about paragraph and image container start here */}
-      <div className="text-sm md:text-base lg:text-lg leading-relaxed text-center md:text-start flex flex-col md:flex-row items-center p-2">
-
-        <p className="md:w-[68%]">
+      {/* about paragraph and image container start here */}
+      <div className="text-sm md:text-base lg:text-lg leading-relaxed  md:text-start flex flex-col md:flex-row items-center p-2">
+        <p className="md:w-fit ">
           I am a Computer Science and Engineering student with a strong interest
           in frontend web development. I have hands-on experience building
           responsive websites and web applications using{" "}
@@ -32,18 +37,16 @@ const About = () => {
           developers, and grow professionally.
         </p>
 
-{/*div for add a video, it contains logos of html,css,react,tailwindcss and js start here*/}
-        <div className="w-48 md:ml-28 my-3 ">
+        {/*div for add a video, it contains logos of html,css,react,tailwindcss and js start here*/}
+        <div className="w-48  md:ml-28 my-3 ">
           <video autoPlay loop muted playsInline className="">
             <source src={hcrtd} type="video/mp4" />
           </video>
         </div>
-{/*div for add a video, it contains logos of html,css,react,tailwindcss and js end here*/}
-
+        {/*div for add a video, it contains logos of html,css,react,tailwindcss and js end here*/}
       </div>
-{/* about paragraph n image container end here */}
-
-    </div>
+      {/* about paragraph n image container end here */}
+    </motion.div>
   );
 };
 

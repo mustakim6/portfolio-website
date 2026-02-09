@@ -1,11 +1,32 @@
-import React from "react";
-
+import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 const Navbar = () => {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const previous = scrollY.getPrevious() ?? 0;
+
+    if (!isHovering && current > previous && current > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
   return (
-    <nav className=" bg-black/20 hover:bg-black/60  w-full p-4 md:px-10  md:flex md:justify-between md:items-center rounded-xl sticky top-0 z-50 hover:shadow-[0_0_20px_2px_rgba(30,58,138,0.8)] hover:my-1 ">
-      
+    <motion.nav
+      onHoverStart={() => setIsHovering(true)}
+      onHoverEnd={() => setIsHovering(false)}
+      initial={{y:-100}}
+      animate={{ y: hidden && !isHovering ? -100 : 0 }}
+      transition={{ duration: '1', type: "spring", stiffness: 300, damping: 30 }}
+      className=" bg-black/20 hover:bg-black/60  w-full p-4 md:px-10  md:flex md:justify-between md:items-center rounded-xl sticky top-0 z-50 hover:shadow-[0_0_20px_2px_rgba(30,58,138,0.8)] hover:my-1 "
+    >
       <div
-        class="text-4xl font-bold bg-clip-text text-transparent 
+        className="text-4xl font-bold bg-clip-text text-transparent 
         bg-linear-to-r from-[#00f1fd] to-[#0066ff]"
       >
         Portfolio
@@ -36,7 +57,7 @@ const Navbar = () => {
           <a href="#contact">Contact</a>
         </li>
       </ul>
-    </nav>
+    </motion.nav>
   );
 };
 

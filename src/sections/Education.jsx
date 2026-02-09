@@ -1,9 +1,17 @@
 import React from "react";
 import SectionTitle from "../components/SectionTitle";
+// eslint-disable-next-line no-unused-vars
+import { motion} from "framer-motion";
+import { fadeUp } from "../components/motionjs/motion";
 
 const Education = () => {
   return (
-    <div>
+    <motion.div 
+    variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    >
       <section id="education" className="max-w-6xl mx-auto px-4 py-16">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -63,7 +71,7 @@ const Education = () => {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 
