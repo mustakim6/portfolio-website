@@ -5,6 +5,9 @@ import cryptoImg1 from "../assets/cryptoImg1.png";
 import cryptoImg2 from "../assets/cryptoImg2.png";
 import agencyImg1 from "../assets/agencyImg1.png";
 import agencyImg2 from "../assets/agencyImg2.png";
+import foundationImg1 from "../assets/foundationImg1.png";
+
+
 // eslint-disable-next-line no-unused-vars
 import { motion} from "framer-motion";
 import { fadeUp } from "../components/motionjs/motion";
@@ -45,6 +48,16 @@ const Projects = () => {
           websiteLink="https://mustakim6.github.io/agency-client/#connect"
           aboutWebsite="A modern web-platform for an agency where both provider and consumer can perform their tasks without any problem."
           sourceCode='https://github.com/mustakim6/agency-client'
+          
+        />
+
+        <ProjectCard
+          projectImg1={foundationImg1}
+          
+          websiteName="Web platform for hilful fujul foundstion"
+          websiteLink="https://hilful-fujul-islami-foundation.vercel.app/"
+          aboutWebsite="A modern web-platform for a village foundation works for village wellfare."
+          sourceCode='https://github.com/mustakim6/hilful-fujul-if-site'
           
         />
         
