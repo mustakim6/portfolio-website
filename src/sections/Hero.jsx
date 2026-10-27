@@ -58,7 +58,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             
           >
-            <a href="cv_mustakim.pdf" download>
+            <a href="/cv_mustakim.pdf" download>
               <Button
               btnText="Download Resume"
               icon={<FaDownload className="text-xl md:text-2xl lg:text-3xl " />}
